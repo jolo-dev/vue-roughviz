@@ -1,17 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Rough-Viz Vue Wrapper</h1>
+    <h3>Bar</h3>
+    <Bar
+      data="https://raw.githubusercontent.com/jwilber/random_data/master/flavors.csv"
+      labels="flavor"
+      values="price"
+    />
+    <h3>Donut</h3>
+    <Donut
+      :data="{ 
+        labels: ['North', 'South', 'East', 'West'], 
+        values: [10, 5, 8, 3] 
+      }" 
+      title=Regions
+      roughness="8"
+      :colors="['red', 'orange', 'blue', 'skyblue']"
+      stroke=black
+      strokeWidth="3"
+      fillStyle="cross-hatch"
+      fillWeight="3.5"
+    />
+
+    <h3>Pie</h3>
+    <Pie
+      :data="{
+        labels: ['North', 'South', 'East', 'West'],
+        values: [10, 5, 8, 3]
+      }"
+      title=Regions
+      :colors="['red', 'orange', 'blue', 'skyblue']"
+      roughness="8"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Bar from "./components/Bar.vue";
+import Donut from "./components/Donut.vue";
+import Pie from "./components/Pie.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Bar,
+    Donut,
+    Pie
   }
 };
 </script>
