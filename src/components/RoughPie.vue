@@ -7,7 +7,7 @@ import { Pie } from "rough-viz";
 import { putAttrsToObj } from "../mixins/putAttrsToObj";
 
 export default {
-  name: "Pie",
+  name: "RoughPie",
   mixins: [putAttrsToObj],
   mounted() {
     let pieAttr = this.putAttrsToObj;

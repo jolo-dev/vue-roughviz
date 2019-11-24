@@ -4,10 +4,10 @@
 
 <script>
 import { Bar } from "rough-viz";
-import { putAttrsToObj } from '../mixins/putAttrsToObj';
+import { putAttrsToObj } from "../mixins/putAttrsToObj";
 
 export default {
-  name: "Bar",
+  name: "RoughBar",
   mixins: [putAttrsToObj],
   mounted() {
     let barAttr = this.putAttrsToObj;
