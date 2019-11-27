@@ -50,6 +50,29 @@
         />
       </div>
       <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Scatter</h3>
+        <rough-scatter
+          data="https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv"
+          title="Iris Scatter Plot"
+          x="sepal_width"
+          y="petal_length"
+          color-var="species"
+          highlight-label="species"
+          fill-weight="4"
+          radius="12"
+          :colors="['pink', 'coral', 'skyblue']"
+          stroke="black"
+          stroke-width="0.4"
+          roughness="1"
+          width="400"
+          height="450"
+          font="0"
+          x-label="sepal width"
+          y-label="petal length"
+          curb-zero="false"
+        />
+      </div>
+      <div class="flex-1 text-center px-4 py-2 m-2">
         <h3>Stacked Bar</h3>
         <rough-stacked-bar
           :data="[
@@ -68,6 +91,25 @@
         />
       </div>
     </div>
+    <div class="flex">
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Horizontal Bar</h3>
+        <rough-bar-h
+          title="Vehicles I've Had"
+          title-font-size="1.5rem"
+          legend="false"
+          :margin="{top: 50, bottom: 100, left: 160, right: 0}"
+          :data="{
+            labels: ['1992 Ford Aerostar Van', '2013 Kia Rio', '1980 Honda CB 125s', '1992 Toyota Tercel'],
+            values: [8, 4, 6, 2]
+          }"
+          x-label="Time Owned (Years)"
+          stroke-width="2"
+          fill-style="zigzag-line"
+          highlight="gold"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -76,7 +118,9 @@ import RoughBar from "./components/RoughBar.vue";
 import RoughDonut from "./components/RoughDonut.vue";
 import RoughPie from "./components/RoughPie.vue";
 import RoughLine from "./components/RoughLine.vue";
+import RoughScatter from "./components/RoughScatter.vue";
 import RoughStackedBar from "./components/RoughStackedBar.vue";
+import RoughBarH from "./components/RoughBarH.vue";
 
 export default {
   name: "App",
@@ -85,7 +129,9 @@ export default {
     RoughDonut,
     RoughPie,
     RoughLine,
-    RoughStackedBar
+    RoughScatter,
+    RoughStackedBar,
+    RoughBarH
   }
 };
 </script>

@@ -1,4 +1,4 @@
-import { camelCase } from "lodash"; // using lodash as a helper for camelcasing the attrs
+import { camelCase, toNumber } from "lodash"; // using lodash as a helper for camelcasing the attrs
 
 export const putAttrsToObj = {
   computed: {
@@ -6,7 +6,7 @@ export const putAttrsToObj = {
       const attrs = this.$attrs;
       let obj = {};
       for (const [key, value] of Object.entries(attrs)) {
-        obj[camelCase(key)] = value;
+        obj[camelCase(key)] = isNaN(value) ? value : toNumber(value);
       }
       return obj;
     }
