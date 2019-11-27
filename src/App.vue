@@ -1,62 +1,73 @@
 <template>
   <div id="app">
     <h1>Rough-Viz Vue Wrapper</h1>
-    <h3>Bar</h3>
-    <rough-bar
-      data="https://raw.githubusercontent.com/jwilber/random_data/master/flavors.csv"
-      labels="flavor"
-      values="price"
-    />
-    <h3>Donut</h3>
-    <rough-donut
-      :data="{
-        labels: ['North', 'South', 'East', 'West'],
-        values: [10, 5, 8, 3]
-      }"
-      title="Regions"
-      roughness="8"
-      :colors="['red', 'orange', 'blue', 'skyblue']"
-      stroke="black"
-      stroke-width="3"
-      fill-style="cross-hatch"
-      fill-weight="3.5"
-    />
-
-    <h3>Pie</h3>
-    <rough-pie
-      :data="{
-        labels: ['North', 'South', 'East', 'West'],
-        values: [10, 5, 8, 3]
-      }"
-      title="Regions"
-      :colors="['red', 'orange', 'blue', 'skyblue']"
-      roughness="8"
-    />
-
-    <h3>Line</h3>
-    <rough-line
-      data="https://raw.githubusercontent.com/jwilber/random_data/master/profits.csv"
-      y1="revenue"
-      y2="cost"
-      y3="profit"
-    />
-
-    <h3>Stacked Bar</h3>
-    <rough-stacked-bar
-      :data="[
-        { month: 'Jan', A: 20, B: 5, C: 10 },
-        { month: 'Feb', A: 25, B: 10, C: 20 },
-        { month: 'March', A: 30, B: 50, C: 10 }
-      ]"
-      labels="month"
-      title="Monthly Revenue"
-      roughness="2"
-      :colors="['blue', '#f996ae', 'skyblue', '#9ff4df']"
-      fill-weight="0.35"
-      stroke-width="0.5"
-      fill-style="cross-hatch"
-      stroke="black"
-    />
+    <div class="flex">
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Bar</h3>
+        <rough-bar
+          data="https://raw.githubusercontent.com/jwilber/random_data/master/flavors.csv"
+          labels="flavor"
+          values="price"
+        />
+      </div>
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Donut</h3>
+        <rough-donut
+          :data="{
+            labels: ['North', 'South', 'East', 'West'],
+            values: [10, 5, 8, 3]
+          }"
+          title="Regions"
+          roughness="8"
+          :colors="['red', 'orange', 'blue', 'skyblue']"
+          stroke="black"
+          stroke-width="3"
+          fill-style="cross-hatch"
+          fill-weight="3.5"
+        />
+      </div>
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Pie</h3>
+        <rough-pie
+          :data="{
+            labels: ['North', 'South', 'East', 'West'],
+            values: [10, 5, 8, 3]
+          }"
+          title="Regions"
+          :colors="['red', 'orange', 'blue', 'skyblue']"
+          roughness="8"
+        />
+      </div>
+    </div>
+    <div class="flex">
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Line</h3>
+        <rough-line
+          data="https://raw.githubusercontent.com/jwilber/random_data/master/profits.csv"
+          y1="revenue"
+          y2="cost"
+          y3="profit"
+        />
+      </div>
+      <div class="flex-1 text-center px-4 py-2 m-2">
+        <h3>Stacked Bar</h3>
+        <rough-stacked-bar
+          :data="[
+            { month: 'Jan', A: 20, B: 5, C: 10 },
+            { month: 'Feb', A: 25, B: 10, C: 20 },
+            { month: 'March', A: 30, B: 50, C: 10 }
+          ]"
+          labels="month"
+          title="Monthly Revenue"
+          roughness="2"
+          :colors="['blue', '#f996ae', 'skyblue', '#9ff4df']"
+          fill-weight="0.35"
+          stroke-width="0.5"
+          fill-style="cross-hatch"
+          stroke="black"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
