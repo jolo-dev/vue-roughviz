@@ -1,7 +1,9 @@
 {
   "name": "vue-roughviz",
   "version": "0.1.0",
-  "private": true,
+  "description": "Vue Wrapper for roughViz.js",
+  "keywords": ["vue", "roughviz", "rough.js", "d3.js"],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
