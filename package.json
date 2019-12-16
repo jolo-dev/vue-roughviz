@@ -2,7 +2,12 @@
   "name": "vue-roughviz",
   "version": "0.1.0",
   "description": "Vue Wrapper for roughViz.js",
-  "keywords": ["vue", "roughviz", "rough.js", "d3.js"],
+  "keywords": [
+    "vue",
+    "roughviz",
+    "rough.js",
+    "d3.js"
+  ],
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -13,6 +18,7 @@
     "core-js": "^3.3.2",
     "lodash": "^4.17.15",
     "rough-viz": "^1.0.5",
+    "serialize-javascript": "^2.1.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
