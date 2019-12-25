@@ -1,6 +1,6 @@
 {
   "name": "vue-roughviz",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vue Wrapper for roughViz.js",
   "license": "MIT",
   "author": "John Long <johnyscrazy@gmail.com>",

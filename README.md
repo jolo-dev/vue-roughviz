@@ -19,24 +19,26 @@ npm install vue-roughviz
 Example for using the Donut-Chart.
 ```
 <template>
+   <div>
     <h3>Donut</h3>
     <rough-donut
-        :data="{
+      :data="{
         labels: ['North', 'South', 'East', 'West'],
         values: [10, 5, 8, 3]
-        }"
-        title="Regions"
-        roughness="8"
-        :colors="['red', 'orange', 'blue', 'skyblue']"
-        stroke="black"
-        stroke-width="3"
-        fill-style="cross-hatch"
-        fill-weight="3.5"
+      }"
+      title="Regions"
+      roughness="8"
+      :colors="['red', 'orange', 'blue', 'skyblue']"
+      stroke="black"
+      stroke-width="3"
+      fill-style="cross-hatch"
+      fill-weight="3.5"
     />
+  </div>
 </template>
 
 <script>
-import {RoughDonut} from 'vue-roughviz'
+import { RoughDonut } from "vue-roughviz";
 Vue.component(RoughDonut)
 </script>
 ```
