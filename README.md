@@ -6,23 +6,41 @@ It's a Vue-wrapper for [roughViz.js](https://github.com/jwilber/roughViz). See e
 ```
 npm install vue-roughviz
 ```
+## Components
+* RoughBar,
+* RoughDonut,
+* RoughPie,
+* RoughLine,
+* RoughScatter,
+* RoughStackedBar,
+* RoughBarH
 
 ## Usage
+Example for using the Donut-Chart.
 ```
-<h3>Donut</h3>
-<rough-donut
-    :data="{
-    labels: ['North', 'South', 'East', 'West'],
-    values: [10, 5, 8, 3]
-    }"
-    title="Regions"
-    roughness="8"
-    :colors="['red', 'orange', 'blue', 'skyblue']"
-    stroke="black"
-    stroke-width="3"
-    fill-style="cross-hatch"
-    fill-weight="3.5"
-/>
+<template>
+   <div>
+    <h3>Donut</h3>
+    <rough-donut
+      :data="{
+        labels: ['North', 'South', 'East', 'West'],
+        values: [10, 5, 8, 3]
+      }"
+      title="Regions"
+      roughness="8"
+      :colors="['red', 'orange', 'blue', 'skyblue']"
+      stroke="black"
+      stroke-width="3"
+      fill-style="cross-hatch"
+      fill-weight="3.5"
+    />
+  </div>
+</template>
+
+<script>
+import { RoughDonut } from "vue-roughviz";
+Vue.component(RoughDonut)
+</script>
 ```
 
 ## Development

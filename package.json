@@ -1,7 +1,9 @@
 {
   "name": "vue-roughviz",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Vue Wrapper for roughViz.js",
+  "license": "MIT",
+  "author": "John Long <johnyscrazy@gmail.com>",
   "keywords": [
     "vue",
     "roughviz",
@@ -11,7 +13,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-roughviz ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -21,6 +23,18 @@
     "serialize-javascript": "^2.1.2",
     "vue": "^2.6.10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jolo-dev/vue-roughviz"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "./dist/vue-roughviz.common.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
