@@ -3,23 +3,28 @@
 It's a Vue-wrapper for [roughViz.js](https://github.com/jwilber/roughViz). See examples in the `App.vue`.
 
 ## Installation
-```
+
+```bash
 npm install vue-roughviz
 ```
+
 ## Components
-* RoughBar,
-* RoughDonut,
-* RoughPie,
-* RoughLine,
-* RoughScatter,
-* RoughStackedBar,
-* RoughBarH
+
+- RoughBar,
+- RoughDonut,
+- RoughPie,
+- RoughLine,
+- RoughScatter,
+- RoughStackedBar,
+- RoughBarH
 
 ## Usage
+
 Example for using the Donut-Chart.
-```
+
+```vue
 <template>
-   <div>
+  <div>
     <h3>Donut</h3>
     <rough-donut
       :data="{
@@ -38,21 +43,24 @@ Example for using the Donut-Chart.
 </template>
 
 <script>
-import { RoughDonut } from "vue-roughviz";
+import { RoughDonut } from 'vue-roughviz'
 Vue.component(RoughDonut)
 </script>
 ```
 
 ## Development
-```
+
+```bash
 npm i
 npm run serve
 ```
+
 In case it is not working,
 this repo uses the [Vue-Cli](https://cli.vuejs.org).
 
 ### Lints and fixes files
-```
+
+```bash
 npm run lint
 ```
 
@@ -60,22 +68,23 @@ npm run lint
 
 The components are following the [Vue Style Guide](https://vuejs.org/v2/style-guide/).
 That means components are called in [Kebab-Style](https://vuejs.org/v2/style-guide/#Self-closing-components-strongly-recommended):
-```
+
+```javascript
 <rough-donut></rough-donut>
 ```
 
 For each attribute, a line in a component and also in Kebab-Style is [recommended](https://vuejs.org/v2/style-guide/#Multi-attribute-elements-strongly-recommended). However,
 both is possible.
 
-```
-fill-weight="0.35" // better than fillWeight
-stroke-width="0.5" // better than strokeWidth
-fill-style="cross-hatch" // better than fillStyle
+```css
+fill-weight = '0.35' // better than fillWeight
+stroke-width = '0.5' // better than strokeWidth
+fill-style = 'cross-hatch' // better than fillStyle
 ```
 
 By passing an object, Vue needs to [bind](https://vuejs.org/v2/guide/class-and-style.html) it.
 
-```
+```javascript
 <rough-pie>
 :data="[
     { month: 'Jan', A: 20, B: 5, C: 10 },
